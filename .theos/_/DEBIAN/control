@@ -1,0 +1,10 @@
+Package: com.yourcompany.project02
+Name: project02
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Hector Medina
+Author: Hector Medina
+Section: Tweaks
+Version: 0.0.1-5+debug
+Installed-Size: 104
