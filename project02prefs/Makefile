@@ -1,5 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
+TARGET = iphone:clang:13.0:13.0
+
 BUNDLE_NAME = project02prefs
 
 project02prefs_FILES = Project02RootListController.m
