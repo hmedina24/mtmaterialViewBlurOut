@@ -15,3 +15,5 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
 	install.exec "sbreload"
+SUBPROJECTS += project02prefs
+include $(THEOS_MAKE_PATH)/aggregate.mk
