@@ -16,3 +16,19 @@
 }
 %end
 //---End hook---
+
+//---Begin interface---
+@interface SBIconListPageControl : UIPageControl {
+
+}
+@end
+//---End interface---
+//---Begin hook---
+%hook SBIconListPageControl
+-(void)setFrame:(CGRect)arg1{
+
+	%orig;
+	self.hidden= YES;
+}
+%end
+//---End hook---
