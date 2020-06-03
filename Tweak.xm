@@ -6,7 +6,7 @@
 @end
 //---End interface---
 //---Begin hook---
-%hook MTMaterialView
+%hook SBDockView
 -(void)setBackgroundAlpha:(double)arg1{
 	%orig;
 	arg1 = 0;
