@@ -37,10 +37,13 @@
 }
 @end
 %hook _UIStatusBarStringView 
--(void)setTextColor:(UIColor *)arg1{
+- (void)didMoveToWindow {
 	%orig;
-	if([self.text isEqualToString:@"T-Mobile"]){
+
+	if ([self.text isEqualToString:@"T-Mobile"]) {
 		self.textColor = [UIColor colorWithRed: 0.92 green: 0.04 blue: 0.56 alpha: 1.00];
+	} else if ([self.text isEqualToString:@"AT&T"]) {
+		self.textColor = [UIColor colorWithRed: 0.00 green: 0.66 blue: 0.88 alpha: 1.00];
 	}
 }
 %end
