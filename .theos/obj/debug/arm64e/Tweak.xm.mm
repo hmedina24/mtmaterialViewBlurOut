@@ -28,8 +28,8 @@
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class SBIconListPageControl; @class SBDockView; 
-static void (*_logos_orig$_ungrouped$SBDockView$setBackgroundAlpha$)(_LOGOS_SELF_TYPE_NORMAL SBDockView* _LOGOS_SELF_CONST, SEL, double); static void _logos_method$_ungrouped$SBDockView$setBackgroundAlpha$(_LOGOS_SELF_TYPE_NORMAL SBDockView* _LOGOS_SELF_CONST, SEL, double); static void (*_logos_orig$_ungrouped$SBIconListPageControl$setFrame$)(_LOGOS_SELF_TYPE_NORMAL SBIconListPageControl* _LOGOS_SELF_CONST, SEL, CGRect); static void _logos_method$_ungrouped$SBIconListPageControl$setFrame$(_LOGOS_SELF_TYPE_NORMAL SBIconListPageControl* _LOGOS_SELF_CONST, SEL, CGRect); 
+@class SBDockView; @class _UIStatusBarStringView; @class SBIconListPageControl; 
+static void (*_logos_orig$_ungrouped$SBDockView$setBackgroundAlpha$)(_LOGOS_SELF_TYPE_NORMAL SBDockView* _LOGOS_SELF_CONST, SEL, double); static void _logos_method$_ungrouped$SBDockView$setBackgroundAlpha$(_LOGOS_SELF_TYPE_NORMAL SBDockView* _LOGOS_SELF_CONST, SEL, double); static void (*_logos_orig$_ungrouped$SBIconListPageControl$setFrame$)(_LOGOS_SELF_TYPE_NORMAL SBIconListPageControl* _LOGOS_SELF_CONST, SEL, CGRect); static void _logos_method$_ungrouped$SBIconListPageControl$setFrame$(_LOGOS_SELF_TYPE_NORMAL SBIconListPageControl* _LOGOS_SELF_CONST, SEL, CGRect); static void (*_logos_orig$_ungrouped$_UIStatusBarStringView$setTextColor$)(_LOGOS_SELF_TYPE_NORMAL _UIStatusBarStringView* _LOGOS_SELF_CONST, SEL, UIColor *); static void _logos_method$_ungrouped$_UIStatusBarStringView$setTextColor$(_LOGOS_SELF_TYPE_NORMAL _UIStatusBarStringView* _LOGOS_SELF_CONST, SEL, UIColor *); 
 
 #line 9 "Tweak.xm"
 
@@ -58,6 +58,18 @@ static void _logos_method$_ungrouped$SBIconListPageControl$setFrame$(_LOGOS_SELF
 }
 
 
+@interface _UIStatusBarStringView : UILabel{
+
+}
+@end
+ 
+static void _logos_method$_ungrouped$_UIStatusBarStringView$setTextColor$(_LOGOS_SELF_TYPE_NORMAL _UIStatusBarStringView* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, UIColor * arg1){
+	_logos_orig$_ungrouped$_UIStatusBarStringView$setTextColor$(self, _cmd, arg1);
+	if([self.text isEqualToString:@"T-Mobile"]){
+		self.textColor = [UIColor colorWithRed: 0.92 green: 0.04 blue: 0.56 alpha: 1.00];
+	}
+}
+
 static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$SBDockView = objc_getClass("SBDockView"); MSHookMessageEx(_logos_class$_ungrouped$SBDockView, @selector(setBackgroundAlpha:), (IMP)&_logos_method$_ungrouped$SBDockView$setBackgroundAlpha$, (IMP*)&_logos_orig$_ungrouped$SBDockView$setBackgroundAlpha$);Class _logos_class$_ungrouped$SBIconListPageControl = objc_getClass("SBIconListPageControl"); MSHookMessageEx(_logos_class$_ungrouped$SBIconListPageControl, @selector(setFrame:), (IMP)&_logos_method$_ungrouped$SBIconListPageControl$setFrame$, (IMP*)&_logos_orig$_ungrouped$SBIconListPageControl$setFrame$);} }
-#line 35 "Tweak.xm"
+{Class _logos_class$_ungrouped$SBDockView = objc_getClass("SBDockView"); MSHookMessageEx(_logos_class$_ungrouped$SBDockView, @selector(setBackgroundAlpha:), (IMP)&_logos_method$_ungrouped$SBDockView$setBackgroundAlpha$, (IMP*)&_logos_orig$_ungrouped$SBDockView$setBackgroundAlpha$);Class _logos_class$_ungrouped$SBIconListPageControl = objc_getClass("SBIconListPageControl"); MSHookMessageEx(_logos_class$_ungrouped$SBIconListPageControl, @selector(setFrame:), (IMP)&_logos_method$_ungrouped$SBIconListPageControl$setFrame$, (IMP*)&_logos_orig$_ungrouped$SBIconListPageControl$setFrame$);Class _logos_class$_ungrouped$_UIStatusBarStringView = objc_getClass("_UIStatusBarStringView"); MSHookMessageEx(_logos_class$_ungrouped$_UIStatusBarStringView, @selector(setTextColor:), (IMP)&_logos_method$_ungrouped$_UIStatusBarStringView$setTextColor$, (IMP*)&_logos_orig$_ungrouped$_UIStatusBarStringView$setTextColor$);} }
+#line 47 "Tweak.xm"
