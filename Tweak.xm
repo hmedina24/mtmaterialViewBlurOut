@@ -9,7 +9,7 @@
 %hook MTMaterialView
 -(void)setBackgroundAlpha:(double)arg1{
 	%orig;
-	arg1 = 0.5;
+	arg1 = 0;
 }
 %end
 //---End hook---
