@@ -12,6 +12,7 @@ TWEAK_NAME = project02
 
 project02_FILES = Tweak.xm
 project02_CFLAGS = -fobjc-arc
+project02_FRAMEWORKS = UIKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
