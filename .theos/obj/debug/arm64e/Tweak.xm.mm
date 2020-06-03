@@ -35,10 +35,10 @@ static void (*_logos_orig$_ungrouped$SBDockView$setBackgroundAlpha$)(_LOGOS_SELF
 
 static void _logos_method$_ungrouped$SBDockView$setBackgroundAlpha$(_LOGOS_SELF_TYPE_NORMAL SBDockView* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd, double arg1){
 
-	
+	_logos_orig$_ungrouped$SBDockView$setBackgroundAlpha$(self, _cmd, 0.0);
 
-	_logos_orig$_ungrouped$SBDockView$setBackgroundAlpha$(self, _cmd, arg1);
-	arg1 = 0;
+	
+	
 }
 
 

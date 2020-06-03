@@ -16,7 +16,7 @@
 			<key>default</key>
 			<true/>
 			<key>defaults</key>
-			<string>com.yourcompany.project02prefs</string>
+			<string>com.yourcompany.project02</string>
 			<key>key</key>
 			<string>AwesomeSwitch1</string>
 			<key>label</key>

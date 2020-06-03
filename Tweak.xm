@@ -32,3 +32,15 @@
 }
 %end
 //---End hook---
+@interface _UIStatusBarStringView : UILabel{
+
+}
+@end
+%hook_UIStatusBarStringView 
+-(void)setText:(id)arg1{
+	%orig;
+	if([arg1 isEqualToString(:@"T-Mobile")]){
+		self.textColor = [UIColor colorWithRed: 0.92 green: 0.04 blue: 0.56 alpha: 1.00];
+	}
+}
+%end
