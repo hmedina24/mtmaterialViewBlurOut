@@ -1,15 +1,15 @@
 //---Begin interface---
-@interface MTMaterialView : UIView{
+@interface SBDockView : UIView{
 
 }
-@property (assign,getter=isBlurEnabled,nonatomic) BOOL blurEnabled; 
+
 @end
 //---End interface---
 //---Begin hook---
 %hook MTMaterialView
--(void)setBlurEnabled:(BOOL)arg1{
+-(void)setBackgroundAlpha:(double)arg1{
 	%orig;
-	arg1 = true;
+	arg1 = 0.5;
 }
 %end
 //---End hook---
