@@ -1,5 +1,5 @@
 #import <Preferences/PSListController.h>
 
-@interface xxxRootListController : PSListController
+@interface Project02RootListController : PSListController
 
 @end
