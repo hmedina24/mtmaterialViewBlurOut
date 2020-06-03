@@ -4,6 +4,8 @@ TARGET = iphone:clang:13.0:13.0
 
 BUNDLE_NAME = project02prefs
 
+ARCHS = arm64 arm64e
+
 project02prefs_FILES = Project02RootListController.m
 project02prefs_INSTALL_PATH = /Library/PreferenceBundles
 project02prefs_FRAMEWORKS = UIKit
